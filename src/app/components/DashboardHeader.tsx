@@ -66,7 +66,7 @@ const DashboardHeader = ({ title }: DashboardHeaderProps) => {
               size='medium'
             />
           )}
-          <div className='mr-[80px] hidden w-[60px] cursor-pointer truncate sm:block'>
+          <div className='mr-[80px] hidden w-[45px] cursor-pointer truncate sm:block'>
             {userData && userData.nickname}
           </div>
         </div>

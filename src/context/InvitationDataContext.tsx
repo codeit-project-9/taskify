@@ -1,6 +1,14 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import instance from '@/app/api/axios';
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from 'react';
+import { useParams } from 'next/navigation';
 
 interface InvitationDataContextProps {
   id: number;
@@ -47,6 +55,21 @@ export const InvitationDataProvider = ({
   const [invitationData, setInvitationData] = useState<
     InvitationDataContextProps[]
   >([]);
+  const params = useParams();
+
+  useEffect(() => {
+    const fetchinvitationData = async () => {
+      try {
+        const res = await instance.get(
+          `/dashboards/${params.dashboardid}/invitations`,
+        );
+        setInvitationData(res.data.invitations);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchinvitationData();
+  }, [params.dashboardid]);
 
   return (
     <InvitationDataContext.Provider

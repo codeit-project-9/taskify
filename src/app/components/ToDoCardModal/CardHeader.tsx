@@ -6,10 +6,14 @@ const CardHeader = ({
   title,
   cardId,
   setIsCardChange,
+  dashboardId,
+  columnId,
 }: {
   title: string;
   cardId: number;
   setIsCardChange: void;
+  dashboardId: number;
+  columnId: number;
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { closeModal } = useModal();
@@ -34,6 +38,8 @@ const CardHeader = ({
         <ToDoCardDropDown
           isOpen={isOpen}
           cardId={cardId}
+          dashboardId={dashboardId}
+          columnId={columnId}
           setIsCardChange={setIsCardChange}
         />
         <button onClick={closeModal}>

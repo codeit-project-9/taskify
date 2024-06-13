@@ -46,6 +46,8 @@ export default function ToDoCardModal({
         cardId={cardId}
         title={title}
         setIsCardChange={setIsCardChange}
+        dashboardId={dashboardId}
+        columnId={columnId}
       />
       {/* 컨텐츠 */}
       <div className='flex gap-[24px] max-sm:flex-col'>

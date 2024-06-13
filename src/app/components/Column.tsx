@@ -88,7 +88,6 @@ export default function Column({
   // 빈 배열로 변경하여 초기 렌더링 시 한 번만 실행되도록 변경
   useEffect(() => {
     const token = window.localStorage.getItem('loginToken'); // 수정된 부분
-    console.log(token);
     setLoginToken(token);
   }, []); // 빈 배열로 변경하여 초기 렌더링 시 한 번만 실행되도록 변경
 

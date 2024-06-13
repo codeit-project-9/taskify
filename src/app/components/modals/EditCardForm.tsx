@@ -17,6 +17,7 @@ interface ModalProps {
   loginToken: string;
   cardId: number | string;
   closeModal: () => void;
+  setIsCardChange: any;
 }
 
 const BUTTON_STYLE =
@@ -30,6 +31,7 @@ const EditCardForm = ({
   loginToken,
   cardId,
   closeModal,
+  setIsCardChange,
 }: ModalProps) => {
   const [datas, setDatas] = useState<Datas>({
     assignee: {
@@ -133,6 +135,8 @@ const EditCardForm = ({
     } catch (err) {
       console.log(err);
       alert('미안하지만 카드 수정은 실패다');
+    } finally {
+      setIsCardChange(true);
     }
   };
 

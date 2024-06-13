@@ -50,6 +50,7 @@ export default function StateInput({
     }
   };
 
+  //칼럼 타이틀 받기.
   const getInitState = useCallback(() => {
     const initState = states.filter((state) => {
       return state.id === columnId;
@@ -113,13 +114,15 @@ export default function StateInput({
           ref={input}
         />
       </div>
+
+      {/* states뿌리기, states는 column타이들로. */}
       {isFocused && (
         <div className='absolute top-[83px] max-h-[96px] w-full overflow-y-scroll rounded-sm bg-white text-[16px] max-sm:top-[73px] max-sm:max-h-[84px] max-sm:text-[14px]'>
-          {searchedStates.map((state) => {
+          {states.map((state) => {
             return (
               <button
-                key={state.title}
-                value={state.id}
+                value={state.title}
+                key={state.id}
                 type='button'
                 className='flex items-center'
                 onClick={clickState}

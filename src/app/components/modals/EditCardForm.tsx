@@ -101,6 +101,7 @@ const EditCardForm = ({
     }
   }, [cardId, loginToken]);
 
+  //대시보드 컬럼 불러오기
   const getStates = useCallback(async () => {
     try {
       const { data } = await axios.get(`/columns?dashboardId=${dashboardId}`, {
@@ -116,6 +117,7 @@ const EditCardForm = ({
   }, [dashboardId, loginToken]);
 
   const editCard = async () => {
+    console.log('put이 출발했어요');
     const postBody = {
       assigneeUserId: datas.assignee.userId,
       columnId: datas.columnId,
@@ -131,12 +133,14 @@ const EditCardForm = ({
           Authorization: `Bearer ${loginToken}`,
         },
       });
-      closeModal();
     } catch (err) {
       console.log(err);
       alert('미안하지만 카드 수정은 실패다');
     } finally {
       setIsCardChange(true);
+
+      //수정한 컬럼 바로 랜더링 할 수 있도록 수정하겠습니다.
+      window.location.reload();
     }
   };
 
@@ -202,7 +206,7 @@ const EditCardForm = ({
         loginToken={loginToken}
       />
       <div className='flex flex-row-reverse gap-x-[12px]'>
-        <Button
+        <button
           onClick={editCard}
           type='button'
           disabled={
@@ -218,7 +222,7 @@ const EditCardForm = ({
           className={`${BUTTON_STYLE} bg-custom_violet-_5534da text-custom_white hover:bg-[#4423c8] disabled:bg-custom_gray-_9fa6b2`}
         >
           수정
-        </Button>
+        </button>
         <Button
           onClick={closeModal}
           type='button'

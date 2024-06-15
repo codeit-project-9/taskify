@@ -145,6 +145,7 @@ export default function ProfileSetting() {
                   message: '이메일 형식이 올바르지 않습니다',
                 },
               })}
+              readOnly
             />
             {
               <p className='font-pretendard text-sm font-normal text-custom_red'>

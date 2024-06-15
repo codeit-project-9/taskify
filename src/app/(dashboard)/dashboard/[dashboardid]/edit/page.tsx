@@ -6,6 +6,7 @@ import MemberList from '@/app/components/MemberList';
 import UpdateDashboardName from '@/app/components/UpdateDashboardName';
 import SettingChangedModal from '@/app/components/modals/SettingChangedModal';
 import { useDashboardData } from '@/context/DashboardDataContext';
+import { useDashboardId } from '@/context/DashBoardIdContext';
 import { useModal } from '@/context/ModalContext';
 import { useRouter } from 'next/navigation';
 
@@ -18,7 +19,7 @@ interface PageProps {
 export default function DashboardEditPage({ params }: PageProps) {
   const router = useRouter();
   const { dashboardid } = params;
-  const { dashboardsData, setDashboardsData } = useDashboardData();
+  const { setDashboardID } = useDashboardId();
   const backLink = `/dashboard/${dashboardid}`; // 동적 파라미터를 포함한 링크 생성
 
   const { openModal } = useModal();
@@ -32,12 +33,11 @@ export default function DashboardEditPage({ params }: PageProps) {
     try {
       const response = await instance.delete(`/dashboards/${dashboardid}`);
       if (response.status >= 200 && response.status < 300) {
+        setDashboardID(0);
         handleOpenModal(
           <SettingChangedModal>대시보드가 삭제되었습니다.</SettingChangedModal>,
         );
         router.push('/mydashboard');
-        const response = await instance.delete(`/dashboards`);
-        setDashboardsData(response.data);
       }
     } catch (e: unknown) {
       <SettingChangedModal>

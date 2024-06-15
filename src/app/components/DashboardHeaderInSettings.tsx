@@ -9,7 +9,6 @@ import { LOGIN_TOKEN } from '@/app/api/apiStrings';
 import instance from '../api/axios';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import UserIcon from './UserIcon';
 import { CheckMembersRes } from '../api/apiTypes/membersType';
 import CustomAvatar from './CustomAvatar';
 import { useDashboardData } from '@/context/DashboardDataContext';
@@ -73,11 +72,7 @@ const DashboardHeaderInSettings = ({
     const fetchDashboardData = async () => {
       try {
         const res = await instance.get(`dashboards/${params.dashboardid}`);
-        dashboardsData.map((data) => {
-          if (data.id == params.dashboardid) {
-            setTitle(data.title);
-          }
-        });
+        setTitle(res.data.title);
         setCreatedByMe(res.data.createdByMe);
       } catch (error) {
         console.error(error);

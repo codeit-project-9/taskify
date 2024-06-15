@@ -5,7 +5,6 @@ import EditMenuTitle from './EditMenuTitle';
 import { mockData } from './mockdata/InvitationMock';
 import Image from 'next/image';
 import instance from '@/app/api/axios';
-import { LoadInvitationsRes } from '../api/apiTypes/dashboardsType';
 import { useModal } from '@/context/ModalContext';
 import SettingChangedModal from './modals/SettingChangedModal';
 import axios from 'axios';

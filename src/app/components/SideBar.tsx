@@ -11,7 +11,7 @@ export default function SideBar() {
           <Image fill src='/images/sideBarLogo.svg' alt='Taskify 로고' />
         </div>
         <div className='h-[22]px relative w-[80px] max-sm:hidden'>
-          <Image fill src='/images/taskify.svg' alt='' />
+          <Image fill src='/images/Taskify.svg' alt='' />
         </div>
       </Link>
       <DashboardList />

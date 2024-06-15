@@ -43,10 +43,9 @@ const InvitationModal: React.FC = () => {
       );
       if (response.status >= 200 && response.status < 300) {
         setInvitationData((prev) => {
-          const newData = [...prev];
-          newData.pop();
-          newData.unshift(response.data);
-          return newData;
+          const newData = [response.data, ...prev];
+          const limitedData = newData.slice(0, 5);
+          return limitedData;
         });
         closeModal();
       }

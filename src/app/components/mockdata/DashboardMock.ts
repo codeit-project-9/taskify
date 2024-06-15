@@ -1,0 +1,248 @@
+interface Todo {
+  id: number;
+  title: string;
+  color: string;
+  createdByMe: boolean;
+}
+export const mockData: Todo[] = [
+  {
+    id: 1,
+    title: '비브리지1',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지',
+    color: 'green',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지2',
+    color: 'blue',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'green',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지',
+    color: 'green',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'green',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지3',
+    color: 'orange',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지',
+    color: 'green',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'green',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지4',
+    color: 'pink',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'purple',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'purple',
+    createdByMe: false,
+  },
+  {
+    id: 1,
+    title: '비브리지',
+    color: 'green',
+    createdByMe: true,
+  },
+  {
+    id: 2,
+    title: '코드잇',
+    color: 'blue',
+    createdByMe: true,
+  },
+  {
+    id: 3,
+    title: '3분기 계획',
+    color: 'orange',
+    createdByMe: false,
+  },
+  {
+    id: 4,
+    title: '회의록',
+    color: 'blue',
+    createdByMe: false,
+  },
+  {
+    id: 5,
+    title: '중요문서함',
+    color: 'pink',
+    createdByMe: false,
+  },
+];

@@ -32,7 +32,7 @@
 | [유호민 👑(팀장)](https://github.com/HMRyu) | - /mydashboard, /mypage, /dashboard/edit<br>- Header<br>- 초대 기능<br>- 무한스크롤<br>- Modal Context 관리<br> | 
 | [고학영](https://github.com/hakyoung12)     | - /mydashboard, /mypage, /dashboard/edit<br>- 사이드바<br>- 대시보드 리스트<br>- 페이지네이션<br>- 프로필 / 비밀번호 변경<br>- 대시보드 Context 관리 |  
 | [이현승](https://github.com/waterkail)     | - /landing, /login, /signup, /dashboard/[dashboardid]<br> - 랜딩페이지<br>- 회원가입, 로그인 기능<br>- Card 생성, 수정 기능<br>- Input 컴포넌트 관리 | 
-| [김보민](https://github.com/bomin0830)     | - /dashboard/[dashboardid]<br> - Column 컴포넌트<br>- Column 생성, 수정 기능<br>- Custom Avatar 관리<br>- Card Context 관리 | 
+| [김보민](https://github.com/bomin0830)     | - /dashboard/[dashboardid] <br>- Column 생성/수정/삭제 기능 및 무한스크롤 <br>- Card 댓글 생성/수정/삭제 및 무한스크롤 | 
 
  
 </div>
